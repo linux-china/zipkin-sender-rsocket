@@ -14,7 +14,10 @@ import java.util.List;
  */
 public class RSocketSender extends Sender {
     private RSocket rsocket;
-    int messageMaxBytes = 500_000;
+    /**
+     * max bytes 16M
+     */
+    private int messageMaxBytes = 16_000_000;
     final Encoding encoding = Encoding.PROTO3;
 
     public RSocketSender(RSocket rsocket) {
