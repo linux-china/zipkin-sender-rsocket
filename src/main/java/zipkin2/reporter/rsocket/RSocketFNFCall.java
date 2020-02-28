@@ -20,7 +20,6 @@ public class RSocketFNFCall extends Call<Void> {
     private Callback<Void> callback;
 
     public RSocketFNFCall(RSocket rsocket, List<byte[]> encodedSpans) {
-
         this.rsocket = rsocket;
         this.encodedSpans = encodedSpans;
     }
