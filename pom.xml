@@ -3,19 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>io.zipkin.reporter2</groupId>
-        <artifactId>zipkin-reporter-parent</artifactId>
-        <version>2.12.1</version>
-    </parent>
-
+    <groupId>org.mvnsearch</groupId>
     <artifactId>zipkin-sender-rsocket</artifactId>
+    <version>2.12.1</version>
     <name>Zipkin Sender: RSocket</name>
 
     <properties>
         <java.version>1.8</java.version>
         <rsocket.version>1.0.0-RC6</rsocket.version>
-        <main.signature.artifact>java18</main.signature.artifact>
+        <zipkin-reporter.version>2.12.1</zipkin-reporter.version>
     </properties>
 
     <scm>
@@ -40,22 +36,21 @@
         <dependency>
             <groupId>io.zipkin.reporter2</groupId>
             <artifactId>zipkin-reporter</artifactId>
+            <version>${zipkin-reporter.version}</version>
         </dependency>
-        <!--rsocket-->
         <dependency>
             <groupId>io.rsocket</groupId>
             <artifactId>rsocket-core</artifactId>
-            <version>${rsocket.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rsocket</groupId>
             <artifactId>rsocket-transport-netty</artifactId>
-            <version>${rsocket.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-tcnative-boringssl-static</artifactId>
-            <version>2.0.30.Final</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -81,14 +76,6 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <parameters>true</parameters>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.mycila</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>3.0</version>
-                <configuration>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
