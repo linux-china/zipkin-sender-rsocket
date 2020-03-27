@@ -8,6 +8,7 @@
     <version>2.12.1</version>
     <name>Zipkin Sender: RSocket</name>
     <description>Zipkin RSocket sender: send spans to Zipkin Server by RSocket Protocol</description>
+    <url>https://github.com/linux-china/zipkin-sender-rsocket</url>
 
     <properties>
         <java.version>1.8</java.version>
