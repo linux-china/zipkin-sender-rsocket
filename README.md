@@ -10,7 +10,7 @@ Zipkin RSocket Sender sends a list of encoded spans to zipkin RSocket collector 
 
 # Where is Zipkin Server with RSocket Collector?
 
-Please visit https://github.com/linux-china/zipkin-rsocket-server
+Please visit https://github.com/linux-china/zipkin-rsocket-server for detail and usage.
 
 # References
 
