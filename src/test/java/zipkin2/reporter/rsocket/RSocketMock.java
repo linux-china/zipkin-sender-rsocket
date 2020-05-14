@@ -1,7 +1,7 @@
 package zipkin2.reporter.rsocket;
 
-import io.rsocket.AbstractRSocket;
 import io.rsocket.Payload;
+import io.rsocket.RSocket;
 import reactor.core.publisher.Mono;
 
 /**
@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
  *
  * @author linux_china
  */
-public class RSocketMock extends AbstractRSocket {
+public class RSocketMock implements RSocket {
 
     @Override
     public Mono<Void> fireAndForget(Payload payload) {
