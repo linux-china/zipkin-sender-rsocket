@@ -1,6 +1,6 @@
 package zipkin2.reporter.rsocket;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import zipkin2.Call;
 import zipkin2.Callback;
 import zipkin2.Span;
